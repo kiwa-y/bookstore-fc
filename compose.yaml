@@ -1,0 +1,12 @@
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: $USERNAME
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: bookstore_db
+
+    ports:
+      - 5432:5432
